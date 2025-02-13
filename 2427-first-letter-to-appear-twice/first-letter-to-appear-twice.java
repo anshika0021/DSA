@@ -1,4 +1,5 @@
 class Solution {
+    char x;
     public char repeatedCharacter(String s) {
         HashSet<Character> set = new HashSet<>();
 
@@ -10,7 +11,7 @@ class Solution {
                 set.add(ch);
             }
         }
-        return 'c';
+        return x;
     }
     
 }
