@@ -1,21 +1,34 @@
 class Solution {
     public boolean search(int[] nums, int target) {
         Arrays.sort(nums);
-        int s=0;
-        int e=nums.length-1;
-        while (s <= e) {
-            int mid = s + (e - s) / 2;
+        int low = 0, high = nums.length-1;
+       
+        
+        while (low <= high) {
+        int mid = (low + high) / 2;
+        if (nums[mid] == target) 
+        return true; 
 
-            if (nums[mid] == target) {
-                return true;
-            } else if (nums[mid] < target) {
-                s = mid + 1;
+
+        if (nums[low] <= nums[mid]) {
+            if (nums[low] <= target && target <= nums[mid]) {
+                high = mid - 1;
             } else {
-                e = mid - 1;
+                low = mid + 1;
             }
+        } 
+        else {
+            if (nums[mid] <= target && target <= nums[high]) {
+                low = mid + 1;
+            } else {
+                high = mid - 1;
+        
+            } 
         }
+    }
+    return false;
 
-        return false;
+    
     }
     
 }
