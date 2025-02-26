@@ -6,7 +6,7 @@ class Solution {
         while (left <= right) {
             int mid = left + (right - left) / 2;
             if ((long) mid * mid == x) return mid; 
-            if ((long) mid * mid < x) { 
+            if ((long)  mid * mid < x) { 
                 ans = mid; 
                 left = mid + 1;
             } else {
