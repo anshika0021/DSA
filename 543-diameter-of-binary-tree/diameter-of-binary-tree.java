@@ -19,8 +19,7 @@ class Solution {
     public int diameterOfBinaryTree(TreeNode root) {
         height(root); 
         return selfdiameter;
-    }
-    
+    } 
     public int height(TreeNode root) {
         if (root == null) return 0;
         
