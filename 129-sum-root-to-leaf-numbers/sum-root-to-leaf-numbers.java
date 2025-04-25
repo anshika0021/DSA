@@ -21,8 +21,7 @@ class Solution {
         if (node == null) {
             return 0; 
         } 
-        current = current* 10 + node.val;
-        
+        current = current* 10 + node.val;  
         if (node.left == null && node.right == null) {
             return current;
         }
