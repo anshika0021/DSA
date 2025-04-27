@@ -29,7 +29,7 @@ class Solution {
                 l2 = l2.next;
             }
 
-            carry = sum / 10; // Carry for next addition
+            carry = sum / 10; 
             current.next = new ListNode(sum % 10); // Store last digit
             current = current.next;
         }
