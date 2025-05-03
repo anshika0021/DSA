@@ -7,7 +7,7 @@ class Solution {
         for (int right = 0; right < s.length(); right++) {
             while (set.contains(s.charAt(right))) {
                 set.remove(s.charAt(left));
-                left++; // Shrink window from left
+                left++; 
             }
             set.add(s.charAt(right));
             maxLength = Math.max(maxLength, right - left + 1);
