@@ -4,10 +4,10 @@ class Solution {
         return false;
     }
     char[] ss = s.toCharArray();
-    char[] ts = t.toCharArray();
+    char[] tt = t.toCharArray();
     Arrays.sort(ss);
-    Arrays.sort(ts); 
-    return Arrays.equals(ss,ts);
+    Arrays.sort(tt);
+    return Arrays.equals(ss,tt);
         
     }
 }
