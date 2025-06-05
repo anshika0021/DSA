@@ -13,7 +13,6 @@ class Solution {
                 int sum = nums[i]+nums[low]+nums[high];
                 if(sum == 0){
                     result.add(Arrays.asList(nums[i],nums[low],nums[high]));
-                    
                     while(low<high && nums[low] == nums[low+1]){
                         low++;
                     }
