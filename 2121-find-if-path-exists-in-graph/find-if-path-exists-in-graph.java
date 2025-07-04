@@ -15,7 +15,6 @@ class Solution {
 
         boolean[] visited = new boolean[n];
         Queue<Integer> q = new LinkedList<>();
-
         q.add(source);
         visited[source] = true;
 
@@ -30,7 +29,6 @@ class Solution {
                 }
             }
         }
-
         return false;
     }
 }
