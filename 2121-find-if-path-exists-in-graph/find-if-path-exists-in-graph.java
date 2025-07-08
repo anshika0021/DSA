@@ -1,34 +1,34 @@
-
 class Solution {
     public boolean validPath(int n, int[][] edges, int source, int destination) {
-        ArrayList<Integer>[] graph = new ArrayList[n];
-        for(int i = 0; i < n; i++) {
-            graph[i] = new ArrayList<>();
+        ArrayList<Integer>[] one = new ArrayList[n];
+        for(int i=0;i<n;i++){
+            one[i] = new ArrayList<>();
         }
-
-        for(int[] edge : edges) {
+        for(int[] edge : edges){
             int u = edge[0];
             int v = edge[1];
-            graph[u].add(v);
-            graph[v].add(u);
-        }
+            one[u].add(v);
+            one[v].add(u);
 
+        }
         boolean[] visited = new boolean[n];
         Queue<Integer> q = new LinkedList<>();
+       
         q.add(source);
-        visited[source] = true;
-
+        visited[source]=true;
         while(!q.isEmpty()) {
-            int curr = q.poll();
-            if(curr == destination) return true;
-
-            for(int neighbor : graph[curr]) {
-                if(!visited[neighbor]) {
-                    visited[neighbor] = true;
-                    q.add(neighbor);
+            int cur = q.poll();
+            if(cur == destination){
+                return true;
+            }
+            for(int neig: one[cur]) {
+                if(!visited[neig]) {
+                    visited[neig] = true;
+                    q.add(neig);
                 }
             }
         }
         return false;
     }
+    
 }
