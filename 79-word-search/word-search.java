@@ -18,8 +18,7 @@ class Solution {
             if(ind == word.length()){
                 return true;
             }
-            if (i < 0 || j < 0 || i >= board.length || j >= board[0].length ||
-            board[i][j] != word.charAt(ind)) {
+            if (i < 0 || j < 0 || i >= board.length || j >= board[0].length || board[i][j] != word.charAt(ind)) {
             return false;
         }
             char temp = board[i][j];
