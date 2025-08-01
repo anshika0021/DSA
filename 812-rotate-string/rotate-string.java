@@ -1,13 +1,9 @@
 class Solution {
     public boolean rotateString(String s, String goal) {
-        
-        if (s.length() != goal.length()) {
+        if(s.length() != goal.length()){
             return false;
         }
-
-        String doubled = s + s;
-        return doubled.contains(goal);
-    
-        
+        String one = s+s;
+        return one.contains(goal);
     }
 }
