@@ -8,13 +8,10 @@
  */
 class Solution {
     public void deleteNode(ListNode node) {
-       
-        if (node == null || node.next == null) return;
-
-        node.val = node.next.val;  // Copy next node's value
-        node.next = node.next.next; // Remove next node
-
-
-        
+        if(node == null || node.next == null){
+            return;
+        }
+        node.val = node.next.val;
+        node.next = node.next.next;
     }
 }
