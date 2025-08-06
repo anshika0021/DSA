@@ -20,7 +20,7 @@ class Solution {
         return res;
     }
     public void helper(TreeNode node,List<Integer> res){
-        if(node == null){
+        if(node == null ){
             return;
         }
         helper(node.left,res);
