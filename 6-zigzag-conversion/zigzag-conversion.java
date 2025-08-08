@@ -4,7 +4,7 @@ public class Solution {
         StringBuilder[] rows = new StringBuilder[numRows];
         for (int i = 0; i < numRows; i++) {
             rows[i] = new StringBuilder();
-        }     
+        }   
         int curRow = 0;
         boolean goingDown = false;
         for (char c : s.toCharArray()) {
@@ -19,5 +19,6 @@ public class Solution {
             result.append(row);
         }
         return result.toString();
+
     }
 }
