@@ -1,1 +1,1 @@
-leatcode DSA CODING QUESTIOns
+leatcode DSA CODING QUESTIOn
