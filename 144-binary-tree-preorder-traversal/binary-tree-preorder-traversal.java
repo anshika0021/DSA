@@ -18,13 +18,14 @@ class Solution {
         List<Integer> res = new ArrayList<>();
         helper(root,res);
         return res;
+        
     }
-    public void helper(TreeNode node,List<Integer> res){
-        if(node == null){
+    public void helper(TreeNode root,List<Integer> res){
+        if(root == null){
             return;
         }
-        res.add(node.val);
-        helper(node.left,res);
-        helper(node.right,res);
+        res.add(root.val);
+        helper(root.left,res);
+        helper(root.right,res);
     }
 }
