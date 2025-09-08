@@ -3,9 +3,7 @@ class Solution {
         int n = nums.length;
         int[] ans = new int[n];
         Arrays.fill(ans, -1); 
-        
         Deque<Integer> stack = new ArrayDeque<>();
-
         for (int i = 0; i < 2 * n; i++) {
             int num = nums[i % n];
             while (!stack.isEmpty() && nums[stack.peek()] < num) {
