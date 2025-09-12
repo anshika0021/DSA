@@ -5,7 +5,7 @@ class Solution {
         queue.add(n);
         visited.add(n);
         int level = 0;
-
+        
         while (!queue.isEmpty()) {
             level++;
             int size = queue.size();
