@@ -10,7 +10,7 @@ class Solution {
             if ((num & diff) == 0) {
                 a ^= num;
             } else {
-                b ^= num; 
+                b ^= num;
             }
         }
         return new int[]{a, b};
