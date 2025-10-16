@@ -14,19 +14,18 @@
  * }
  */
 class Solution {
-    int selfdiameter = 0; 
-    
-    public int diameterOfBinaryTree(TreeNode root) {
-        height(root); 
-        return selfdiameter;
-    } 
-    public int height(TreeNode root) {
-        if (root == null) return 0;
-        
-        int leftdiameter= height(root.left);   
-        int rightdiameter = height(root.right); 
-        
-        selfdiameter = Math.max(selfdiameter, leftdiameter + rightdiameter); 
-        return Math.max(leftdiameter, rightdiameter)+1; 
+    int diameter = 0;
+    public int diameterOfBinaryTree(TreeNode root) { 
+        height(root);
+        return diameter;
+    }
+    public int height(TreeNode root){
+        if(root == null){
+            return 0;
+        }
+        int left = height(root.left);
+        int right = height(root.right);
+        diameter = Math.max(diameter,left+right);
+        return Math.max(left,right)+1;
     }
 }
